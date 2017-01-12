@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5005F70C1E27891B008F422B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005F70B1E27891B008F422B /* AppDelegate.swift */; };
-		5005F70E1E27891B008F422B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005F70D1E27891B008F422B /* ViewController.swift */; };
 		5005F7111E27891B008F422B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5005F70F1E27891B008F422B /* Main.storyboard */; };
 		5005F7131E27891B008F422B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5005F7121E27891B008F422B /* Assets.xcassets */; };
 		5005F7161E27891B008F422B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5005F7141E27891B008F422B /* LaunchScreen.storyboard */; };
 		5005F7211E27891B008F422B /* PlanYourTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005F7201E27891B008F422B /* PlanYourTripTests.swift */; };
 		5005F72C1E27891B008F422B /* PlanYourTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005F72B1E27891B008F422B /* PlanYourTripUITests.swift */; };
+		5005F73A1E278FBD008F422B /* FindTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005F7391E278FBD008F422B /* FindTripViewController.swift */; };
+		5005F73C1E27ABCC008F422B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005F73B1E27ABCC008F422B /* MapViewController.swift */; };
+		5005F73F1E27AED9008F422B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5005F73E1E27AED9008F422B /* CoreLocation.framework */; };
+		5005F7411E27B3E2008F422B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5005F7401E27B3E2008F422B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		5005F7081E27891B008F422B /* PlanYourTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanYourTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5005F70B1E27891B008F422B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5005F70D1E27891B008F422B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5005F7101E27891B008F422B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5005F7121E27891B008F422B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5005F7151E27891B008F422B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		5005F7271E27891B008F422B /* PlanYourTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanYourTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5005F72B1E27891B008F422B /* PlanYourTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanYourTripUITests.swift; sourceTree = "<group>"; };
 		5005F72D1E27891B008F422B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5005F7391E278FBD008F422B /* FindTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindTripViewController.swift; sourceTree = "<group>"; };
+		5005F73B1E27ABCC008F422B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5005F73E1E27AED9008F422B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5005F7401E27B3E2008F422B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5005F7411E27B3E2008F422B /* MapKit.framework in Frameworks */,
+				5005F73F1E27AED9008F422B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,7 @@
 				5005F71F1E27891B008F422B /* PlanYourTripTests */,
 				5005F72A1E27891B008F422B /* PlanYourTripUITests */,
 				5005F7091E27891B008F422B /* Products */,
+				5005F73D1E27AED9008F422B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				5005F70B1E27891B008F422B /* AppDelegate.swift */,
-				5005F70D1E27891B008F422B /* ViewController.swift */,
+				5005F7391E278FBD008F422B /* FindTripViewController.swift */,
+				5005F73B1E27ABCC008F422B /* MapViewController.swift */,
 				5005F70F1E27891B008F422B /* Main.storyboard */,
 				5005F7121E27891B008F422B /* Assets.xcassets */,
 				5005F7141E27891B008F422B /* LaunchScreen.storyboard */,
@@ -123,6 +133,15 @@
 				5005F72D1E27891B008F422B /* Info.plist */,
 			);
 			path = PlanYourTripUITests;
+			sourceTree = "<group>";
+		};
+		5005F73D1E27AED9008F422B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5005F7401E27B3E2008F422B /* MapKit.framework */,
+				5005F73E1E27AED9008F422B /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +212,13 @@
 				TargetAttributes = {
 					5005F7071E27891A008F422B = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KM569NM77P;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					5005F71B1E27891B008F422B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -259,7 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5005F70E1E27891B008F422B /* ViewController.swift in Sources */,
+				5005F73A1E278FBD008F422B /* FindTripViewController.swift in Sources */,
+				5005F73C1E27ABCC008F422B /* MapViewController.swift in Sources */,
 				5005F70C1E27891B008F422B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +438,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KM569NM77P;
 				INFOPLIST_FILE = PlanYourTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xproject.PlanYourTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +452,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KM569NM77P;
 				INFOPLIST_FILE = PlanYourTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xproject.PlanYourTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +535,7 @@
 				5005F7321E27891B008F422B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5005F7331E27891B008F422B /* Build configuration list for PBXNativeTarget "PlanYourTripTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +544,7 @@
 				5005F7351E27891B008F422B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5005F7361E27891B008F422B /* Build configuration list for PBXNativeTarget "PlanYourTripUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +553,7 @@
 				5005F7381E27891B008F422B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
