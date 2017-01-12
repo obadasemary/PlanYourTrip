@@ -39,6 +39,8 @@ class FindTripViewController: UIViewController, UITextFieldDelegate, CLLocationM
         toLocationTextField.delegate = self
     }
 
+    // MARK: - useCurrentLocationButton
+    
     @IBAction func useCurrentLocationButton(_ sender: Any) {
         
         let latLocation = locationManager.location?.coordinate.latitude
@@ -67,6 +69,8 @@ class FindTripViewController: UIViewController, UITextFieldDelegate, CLLocationM
             }
         })
     }
+    
+    // MARK: - addLocationButton
     
     @IBAction func addLocation(_ sender: Any) {
         
@@ -98,6 +102,8 @@ class FindTripViewController: UIViewController, UITextFieldDelegate, CLLocationM
 
         }
     }
+    
+    // MARK: - goToLocationButton
     
     @IBAction func goToLocationButton(_ sender: Any) {
         

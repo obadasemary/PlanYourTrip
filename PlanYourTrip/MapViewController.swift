@@ -21,7 +21,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var fromAddressLocation: String = ""
     var toAddressLocation: String = ""
-    // "Levent, 34330 Beşiktaş/İstanbul"
     
     var currentPlacemark:CLPlacemark?
     var currentTransportType = MKDirectionsTransportType.automobile
@@ -45,6 +44,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         getGeoCoder(address: fromAddressLocation)
         getGeoCoder(address: toAddressLocation)
     }
+    
+    // MARK: - getGeoCoder
 
     func getGeoCoder(address: String) {
         
@@ -81,6 +82,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
+    // MARK: - CLLocationManagerDelegate
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations.last
@@ -97,6 +100,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         print("Error: " + error.localizedDescription)
     }
+    
+    // MARK: - showDirection
     
     @IBAction func showDirection(_ sender: Any) {
         
@@ -152,12 +157,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    func timeFormatted(totalSeconds: Int) -> String {
-        let seconds: Int = totalSeconds % 60
-        let minutes: Int = (totalSeconds / 60) % 60
-        let hours: Int = totalSeconds / 3600
-        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-    }
+    // MARK: - MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         
@@ -169,6 +169,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         return renderer
     }
+    
+    // MARK: - timeFormatted
+    
+    func timeFormatted(totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        let hours: Int = totalSeconds / 3600
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+
 }
 
 
