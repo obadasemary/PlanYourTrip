@@ -181,8 +181,4 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let hours: Int = totalSeconds / 3600
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
-
 }
-
-
-
